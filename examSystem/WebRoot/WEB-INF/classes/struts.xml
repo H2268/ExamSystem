@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" "http://struts.apache.org/dtds/struts2.5.dtd" >
+<struts>
+    <package name="examSystem" namespace="/"  extends="struts-default" strict-method-invocation="false">
+           <action name="*_Action"  class="Action.studentAction" method="{1}">
+                  <result name="score">/score.jsp</result>
+                 <result name="sJoin">/sJoin.jsp</result>
+                 <result name="success">/sExam.jsp</result>
+                 <result name="input">/sLogin.jsp</result>
+          </action>
+          <action name="*_Action2"  class="Action.teacherAction" method="{1}">
+                 <result name="cAdd">/cAdd.jsp</result>
+                 <result name="pEdit">/pEdit.jsp</result>
+                 <result name="success">/paper.jsp</result>
+                 <result name="error">/tLogin.jsp</result>
+          </action>
+          <action name="*_Action3"  class="Action.adminAction" method="{1}">
+                 <result name="sEdit">/sEdit.jsp</result>
+                 <result name="success">/show.jsp</result>
+                 <result name="error">/aLogin.jsp</result>
+          </action>
+    
+    </package>
+</struts>
